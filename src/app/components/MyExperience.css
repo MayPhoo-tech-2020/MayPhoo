@@ -1,0 +1,53 @@
+.partfour {
+    width: 80%;
+    height: auto; /* Adjust height as needed */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #cccccc; /* Light grey border */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.experience-logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+}
+
+.experience-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.experience-line {
+    border: 0;
+    height: 2px;
+    background: #333; /* Adjust color as needed */
+    margin: 20px 0;
+    width: 100%;
+}
+
+.experience-description {
+    text-align: left;
+}
+
+.experience-list {
+    text-align: left;
+}
+
+.experience-details {
+    margin-left: 3%;
+}

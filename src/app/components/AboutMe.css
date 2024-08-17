@@ -1,0 +1,143 @@
+.parttwo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: 5%;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.aboutme-title {
+    text-align: center;
+    margin-bottom: 1%;
+    color: #000; /* Ensure text color is set */
+}
+
+.parttwo-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+}
+
+.parttwo-img img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.parttwo-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 13px;
+    color: #000; /* Ensure text color is set */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.parttwo-content h2 {
+    margin-bottom: 5%;
+    color: #000; /* Ensure text color is set */
+}
+
+.parttwotxtcolor {
+    color: #333;
+}
+
+.intro-txt {
+    max-width: 600px;
+    margin: 5px 0;
+    text-align: center;
+    font-size: 13px;
+    color: #000; /* Ensure text color is set */
+}
+
+.txt-list {
+    display: flex;
+    gap: 10px;
+}
+
+.txt-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.txt-list li {
+    margin-top: 10%;
+    font-size: 13px;
+    color: #000; /* Ensure text color is set */
+    display: flex;
+    align-items: center;
+}
+
+.txt-list li img {
+    width: 20px; /* Adjust the size of the icons */
+    height: 20px;
+    margin-right: 7px;
+}
+@media (max-width: 768px) {
+    .body {
+        margin-top: 20%;
+        margin-left: 3%;
+        width: 88%;
+        flex-direction: column;
+    }
+
+    .parttwo-img img {
+        width: 135px;
+        height: 156px;
+        border-radius: 10px;
+        margin-top: 35%;
+    }
+}
+
+@media (max-width: 480px) {
+    .parttwo-content p,
+    .txt-list li {
+        font-size: 12px;
+    }
+
+    .parttwo-content h2 {
+        font-size: 18px;
+    }
+    .parttwo h2 {
+        margin-top: 10%;
+    }
+    .parttwo-img img {
+        margin-top: 10%;
+    }
+    .resume-button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .txt-list {
+        flex-direction: column;
+        gap: 10px; /* Increase gap for better spacing */
+    }
+
+    .txt-list ul {
+        padding: 0;
+    }
+
+    .txt-list li {
+        margin-top: 10%;
+    }
+
+    .parttwo-content {
+        padding: 10px 20px; /* Adjust padding for better spacing on smaller screens */
+    }
+
+    .buttons-container {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 10px; /* Add space between buttons */
+    }
+
+    .buttons-container a {
+        margin-left: 0; /* Reset margin for better alignment */
+    }
+}

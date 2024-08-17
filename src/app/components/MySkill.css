@@ -1,0 +1,60 @@
+.partthree {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: #000; /* Ensure text color is set */
+}
+
+.partthree h2 {
+    text-align: center;
+    margin-bottom: 3%;
+    color: #000; /* Ensure text color is set */
+}
+
+.skills-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.skills-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.skills-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.skills-line {
+    border: 0;
+    height: 2px;
+    background: #333; /* Adjust color as needed */
+    margin: 20px 0;
+    width: 100%;
+}
+
+.skills-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-img {
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+    object-fit: contain;
+    border: 2px solid white; /* Add border to each image */
+    padding: 10px; /* Add padding inside the border */
+    border-radius: 10px; /* Optional: round the corners of the images */
+    box-shadow: 0 0 10px white; /* Optional: add white shadow for highlighting effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-img:hover {
+    transform: translateY(-5px);
+}

@@ -1,12 +1,16 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import ButtonComponent from "./component/ButtonComponent";
+
+import SideNav from "./components/SideNav"
+import './App.css'
+import Body from "./components/Body"
+
 
 export default function Home() {
   return (
-   <div>
-     <h1>Home Page</h1>
-     <ButtonComponent />
-   </div>
+    <main>
+    <div className="App">
+        <SideNav/>
+        <Body/>
+      </div>
+    </main>
   );
 }

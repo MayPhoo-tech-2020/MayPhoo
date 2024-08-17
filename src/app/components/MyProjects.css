@@ -1,0 +1,49 @@
+.partfive {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: #000; /* Ensure text color is set */
+    transition: all 0.3s ease-in-out;
+}
+
+.projects-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    text-align: center;
+    width: 200px; /* Adjust width as needed */
+    padding: 10px;
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border: 2px solid white; /* Add border to each image */
+    padding: 10px; /* Add padding inside the border */
+    border-radius: 10px; /* Optional: round the corners of the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Floating shadow effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-img:hover {
+    transform: translateY(-10px); /* Slight floating effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+
+
+@media (max-width: 768px) {
+    .projects-list {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+    }
+
+    .project-item {
+        width: 100%; /* Adjust width for smaller screens */
+    }
+}

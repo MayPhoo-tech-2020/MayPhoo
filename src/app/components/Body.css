@@ -1,0 +1,33 @@
+.body {
+    margin-left: 12%;
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    background-color: #ffffff;
+    color: #000; /* Ensure text color is set */
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #000; /* Ensure text color is set */
+}
+
+.line {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 20px 0;
+    width: 100%;
+}
+
+
+
+
+
+
