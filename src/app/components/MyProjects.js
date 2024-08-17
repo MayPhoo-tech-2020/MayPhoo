@@ -3,11 +3,16 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const MyProjects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const router = useRouter();
+  const handleClick = () => {
+    router.push('/project-details'); // Replace '/next-page' with the actual path to your next page
+  };
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -45,7 +50,9 @@ const MyProjects = () => {
         <div className="card-body">
           <h5 className="card-title">{project.title}</h5>
           <p className="card-text"><strong>Description:</strong> {project.description}</p>
-          <a href="#" className="btn btn-primary">View Details</a>
+          <button onClick={handleClick}>
+     View details
+    </button>
         </div>
       </div>
     ))}
