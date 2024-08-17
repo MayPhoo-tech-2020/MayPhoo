@@ -22,10 +22,10 @@ export async function POST(request) {
     `;
 
     // Retrieve all records from the database to confirm the insertion
-    const data = await sql`SELECT * FROM Project;`;
+   // const data = await sql`SELECT * FROM Project;`;
 
     // Convert the data to a JSON string before sending it back in the response
-    return new NextResponse(JSON.stringify({ data }), { status: 200 });
+   // return new NextResponse(JSON.stringify({ data }), { status: 200 });
 
   } catch (error) {
     // Handle errors and respond with an error message
