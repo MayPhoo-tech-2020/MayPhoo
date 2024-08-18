@@ -2,15 +2,10 @@
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    text-align: center;
     color: #000; /* Ensure text color is set */
 }
 
-.partthree h2 {
-    text-align: center;
-    margin-bottom: 3%;
-    color: #000; /* Ensure text color is set */
-}
+
 
 .skills-container {
     background-color: #fff;
@@ -18,6 +13,7 @@
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
+    margin-top: 2%;
 }
 
 .skills-container:hover {
@@ -27,8 +23,13 @@
 .skills-title {
     font-size: 24px;
     margin-bottom: 10px;
+    text-align: left;
+    color: #000; 
+    margin-bottom: 3%;
 }
-
+.each-title{
+    text-align: center;
+}
 .skills-line {
     border: 0;
     height: 2px;
@@ -39,7 +40,6 @@
 
 .skills-images {
     display: flex;
-    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
