@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import './MyProjects.css'; 
 
 const MyProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -46,13 +47,12 @@ const MyProjects = () => {
     {projects.map((project) => (
       <div key={project.id} className="card" style={{ width: '20rem' }}>
         {/* If you have a project image URL, replace the src with project.imageURL */}
-        <Image src="/assets/images/mayphoologo.png" width={150} height={150} className="card-img-top" alt={project.title} />
+        <Image  src={`/assets/images/${project.image}`}  width={150} height={150} className="card-img-top" alt={project.title} />
         <div className="card-body">
           <h5 className="card-title">{project.title}</h5>
-          <p className="card-text"><strong>Description:</strong> {project.description}</p>
-          <button onClick={handleClick}>
-     View details
-    </button>
+          <p className="card-text">{project.description}</p>
+          <button className="detail-button" onClick={handleClick}>View Details</button>
+          <button className="detail-button"><a href={`${project.githublink}`} > Go To GitHub </a></button>
         </div>
       </div>
     ))}

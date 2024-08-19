@@ -10,10 +10,12 @@ export async function POST() {
       CREATE TABLE Project (
         id SERIAL PRIMARY KEY,
         Title varchar(255),
+        Image varchar(100),
         Description varchar(300),
         Technologies varchar (255),
         Languages varchar(255),
-        Contributions varchar(500)
+        Contributions varchar(500),
+        GitHubLink varchar(255)
 
       );
     `;
