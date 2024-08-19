@@ -1,4 +1,4 @@
-// app/api/get-test/route.js
+//http://localhost:3000/api/get-project
 import { sql } from '@vercel/postgres';
 import { NextResponse } from 'next/server';
 

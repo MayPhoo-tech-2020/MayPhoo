@@ -1,4 +1,4 @@
-// http://localhost:3000/api/get-test
+//http://localhost:3000/api/get-experience
 import { sql } from '@vercel/postgres';
 import { NextResponse } from 'next/server';
 
@@ -9,13 +9,13 @@ export async function GET(request) {
 
   try {
     // Introduce a short delay (adjust as needed for testing)
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 500));
 
     // Fetch pets from the database
-    const { rows: data } = await sql`SELECT * FROM Test;`;
+    const { rows: data } = await sql`SELECT * FROM Experience;`;
 
     // Log the fetched data
-    console.log('Fetched test:', data);
+   // console.log('Fetched test:', data);
 
     // Return the response with no caching
     return NextResponse.json({ data }, {
