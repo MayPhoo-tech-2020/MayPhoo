@@ -1,6 +1,13 @@
 .partfour {
     width: 80%;
     height: auto; /* Adjust height as needed */
+   
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
     margin: 20px auto;
     padding: 20px;
     background-color: #ffffff;
@@ -9,26 +16,20 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
-.experience-container {
-    display: flex;
-    flex-direction: column;
-}
-
 .experience-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 10px;
 }
 
 .experience-logo {
-    width: 50px; /* Adjust size as needed */
+    width: 200px; /* Adjust size as needed */
     height: auto;
 }
 
 .experience-title {
-    font-size: 24px;
+    font-size: 30px;
     margin: 0;
 }
 
