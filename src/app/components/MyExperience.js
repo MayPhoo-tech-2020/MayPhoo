@@ -10,7 +10,11 @@ const MyExperience = ()=> {
               <div className="experience-container">
                       <div className="experience-header">
                           <img src="/assets/images/lithan.jpeg" alt="Company Logo" className="experience-logo" />
+                          <div>
                           <h2 className="experience-title">Lithan, On-Campus Mentor(Software Engineering)</h2>
+                          <h5>Jul 2021 – Nov 2023 | Myitkyina, Kachin State</h5>
+                          </div>
+                          
                       </div>
                       <hr className="experience-line" />
                       <div className='experience-details'>

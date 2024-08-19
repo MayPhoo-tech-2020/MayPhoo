@@ -1,3 +1,14 @@
+//http://localhost:3000/api/add-project
+/*
+{
+  "title": "Vocabualry",
+  "description": "Developed a full-featured blog post application with CRUD operations, multimedia support, and secure authentication/authorization.",
+  "technologies": "Spring Boot, Spring Security, MySQL, AWS, CI/CD Pipeline",
+  "languages": "Python",
+  "contributions": "Designed and implemented RESTful APIs for managing blog posts, including images and videos. Integrated Spring Security for robust authentication and role-based authorization. Deployed the application on AWS using a CI/CD pipeline to ensure seamless updates and scalability."
+}
+
+*/
 'use server';
 
 import { sql } from '@vercel/postgres';
