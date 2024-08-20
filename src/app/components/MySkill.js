@@ -1,15 +1,19 @@
-"use client";
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import './MySkill.css';
 
 const MySkill = () => {
-    const [skills, setSkills] = useState([]);
+    const [skills, setSkills] = useState({});
     const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchSkills = async () => {
             try {
-                const response = await fetch('http://localhost:3000/api/get-skill');
+                const response = await fetch('/api/get-skill'); // Use relative path for API
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
                 const data = await response.json();
 
                 // Group skills by category
