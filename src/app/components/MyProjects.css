@@ -55,5 +55,22 @@
     cursor: pointer;
     border-radius: 20px;
     transition: background-color 0.3s;
+    margin: 0;
+   
 }
-
+.card-description{
+    width: 100%;
+    height: 230px;
+}
+.div-card-title{
+    height: 50px;
+}
+.card-container {
+    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 16px; /* Adjust the value to make the edges more rounded */
+  }
+  
+  .card-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2);
+  }
+  

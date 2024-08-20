@@ -12,7 +12,7 @@ export async function GET(request) {
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     // Fetch pets from the database
-    const { rows: data } = await sql`SELECT * FROM Test;`;
+    const { rows: data } = await sql`SELECT * FROM Test ORDER BY id DESC; `;
 
     // Log the fetched data
     console.log('Fetched test:', data);

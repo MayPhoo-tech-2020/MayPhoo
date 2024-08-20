@@ -47,24 +47,30 @@ const MyProjects = () => {
     <div className="container" style={{ textAlign: 'center', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '50px' }}>
       {projects.map((project) => (
         <div key={project.id} className="card" style={{ width: '20rem' }}>
-          <Image 
+    {/*  <Image 
             src={`/assets/images/${project.image}`} 
             width={150} 
             height={150} 
             className="card-img-top" 
             alt={project.title} 
           />
-          <div className="card-body">
-            <h5 className="card-title">{project.title}</h5>
-            <p className="card-text">{project.description}</p>
-            {/* Use an arrow function to pass the project.id */}
-            <button 
-              className="detail-button" 
-              onClick={() => handleClick(project.id)}
-            >
-              View Details
-            </button>
-          </div>
+          */
+      }
+          <div className="card-container card-body">
+  <div className="div-card-title">
+    <h5 className="card-title">{project.title}</h5>
+  </div>
+  <div className="card-description">
+    <p className="card-text">{project.description}</p>
+  </div>
+  <button 
+    className="detail-button" 
+    onClick={() => handleClick(project.id)}
+  >
+    View Details
+  </button>
+</div>
+
         </div>
       ))}
     </div>

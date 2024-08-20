@@ -1,19 +1,27 @@
+/* Base Styles */
+
 .partfour {
     width: 80%;
-    height: auto; /* Adjust height as needed */
-   
+    max-width: 1200px; /* Optional: limits the maximum width */
+    height: auto;
+    margin: 0 auto;
 }
 
 .experience-container {
     display: flex;
     flex-direction: column;
-    margin-top: 2%;
     margin: 20px auto;
     padding: 20px;
     background-color: #ffffff;
     border: 2px solid #cccccc; /* Light grey border */
     border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Light shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.experience-container:hover {
+    transform: translateY(-10px); /* Slight floating effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .experience-header {
@@ -22,8 +30,10 @@
     justify-content: space-between;
     width: 100%;
 }
-.experience-header h5{
-    margin-top:1%;
+
+.experience-header h5 {
+    margin-top: 1%;
+    font-size: 1.25rem; /* Responsive font size */
 }
 
 .experience-logo {
@@ -32,7 +42,7 @@
 }
 
 .experience-title {
-    font-size: 30px;
+    font-size: 2rem; /* Responsive font size */
     margin: 0;
 }
 
@@ -46,12 +56,56 @@
 
 .experience-description {
     text-align: left;
+    font-size: 1rem; /* Responsive font size */
 }
 
 .experience-list {
     text-align: left;
+    margin-left: 3%;
+    font-size: 1rem; /* Responsive font size */
 }
 
 .experience-details {
     margin-left: 3%;
+    font-size: 1rem; /* Responsive font size */
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Font Sizes */
+
+@media (max-width: 768px) {
+    .experience-title {
+        font-size: 1.5rem;
+    }
+
+    .experience-header h5 {
+        font-size: 1rem; /* Adjust as needed */
+    }
+
+    .experience-description,
+    .experience-list,
+    .experience-details {
+        font-size: 0.875rem; /* Adjust as needed */
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-title {
+        font-size: 1.25rem;
+    }
+
+    .experience-header h5 {
+        font-size: 0.875rem; /* Adjust as needed */
+    }
+
+    .experience-description,
+    .experience-list,
+    .experience-details {
+        font-size: 0.75rem; /* Adjust as needed */
+    }
 }

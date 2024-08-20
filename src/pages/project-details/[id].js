@@ -1,10 +1,13 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Image from 'next/image';
+import Link from 'next/link';
+import '../project-details/ProjectDetails.css'; // Import the CSS file
 
 const ProjectDetails = () => {
   const router = useRouter();
-  const { id } = router.query; // Get ID from query parameters
+  const { id } = router.query;
   const [project, setProject] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -13,7 +16,6 @@ const ProjectDetails = () => {
     const fetchProject = async () => {
       if (id) {
         try {
-          // Use the ID from path parameters
           const response = await axios.get(`/api/get-each-project/${id}`);
           setProject(response.data.data);
         } catch (error) {
@@ -33,12 +35,34 @@ const ProjectDetails = () => {
   if (!project) return <p>No project found.</p>;
 
   return (
-    <div>
-      <h1>Project Details</h1>
-      <h2>Project ID: {project.id}</h2>
-      <p>Title: {project.title}</p>
-      <p>Description: {project.description}</p>
-      {/* Add more project details as needed */}
+    <div className="projectDetailsContainer">
+      <div className="card">
+        <h1 className="projectTitle">{project.title}</h1>
+        <Link href={project.githublink} target="_blank" className="githubButton">
+          View on GitHub
+        </Link>
+        <div className="projectContent">
+          <div className="imageContainer">
+            {/*
+            <Image
+              src={`/assets/images/${project.image}`}
+              alt={project.title}
+              width={800}
+              height={450}
+              className="projectImage"
+            />*/
+            }
+          </div>
+          <div className="projectInfo">
+            <p className="projectDescription">{project.description}</p>
+            <ul className="infoList">
+              <li><strong>Technologies:</strong> {project.technologies}</li>
+              <li><strong>Languages:</strong> {project.languages}</li>
+              <li><strong>Contributions:</strong> {project.contributions}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
