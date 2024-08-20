@@ -8,6 +8,7 @@ const baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
 const MySkill = () => {
     const [skills, setSkills] = useState([]);
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchSkills = async () => {
@@ -30,15 +31,17 @@ const MySkill = () => {
             } catch (err) {
                 setError('Failed to fetch skills');
                 console.error('Error fetching skills:', err);
+            } finally {
+                setLoading(false);
             }
         };
 
         fetchSkills();
     }, []);
 
-    if (error) {
-        return <div className="error-message">{error}</div>;
-    }
+    if (loading) return <p>Loading skills...</p>;
+
+    if (error) return <div className="error-message">{error}</div>;
 
     return (
         <div className="partthree">

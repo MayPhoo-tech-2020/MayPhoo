@@ -8,6 +8,7 @@ const baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
 const MyExperience = () => {
     const [experiences, setExperiences] = useState([]);
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchExperiences = async () => {
@@ -21,15 +22,17 @@ const MyExperience = () => {
             } catch (err) {
                 setError('Failed to fetch experiences');
                 console.error('Error fetching experiences:', err);
+            } finally {
+                setLoading(false);
             }
         };
 
         fetchExperiences();
     }, []);
 
-    if (error) {
-        return <div className="error-message">{error}</div>;
-    }
+    if (loading) return <p>Loading experiences...</p>;
+
+    if (error) return <div className="error-message">{error}</div>;
 
     const splitSentences = (text) => {
         return text

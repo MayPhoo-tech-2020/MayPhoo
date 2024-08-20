@@ -29,7 +29,7 @@ const MyProjects = () => {
         setProjects(projectsData);
       } catch (error) {
         console.error('Error fetching projects:', error);
-        setError(error);
+        setError('Failed to fetch projects');
       } finally {
         setLoading(false);
       }
@@ -38,9 +38,9 @@ const MyProjects = () => {
     fetchProjects();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p>Loading projects...</p>;
 
-  if (error) return <p>Error: {error.message}</p>;
+  if (error) return <p>{error}</p>;
 
   return (
     <div className="container" style={{ textAlign: 'center', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '50px' }}>
