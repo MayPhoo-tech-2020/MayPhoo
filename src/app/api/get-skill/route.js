@@ -11,7 +11,7 @@ export async function GET(request) {
     await new Promise(resolve => setTimeout(resolve, 500));
 
     // Fetch skills from the database
-    const { rows: data } = await sql`SELECT * FROM Skill ORDER BY id DESC;`;
+    const { rows: data } = await sql`SELECT * FROM Skill ORDER BY id ASC;`;
 
     // Log the fetched data
     console.log('Fetched skills:', data);
