@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+import React, { useState, useEffect } from 'react';
 import './Body.css';
 import Intro from './Intro';
 import AboutMe from './AboutMe';
@@ -8,6 +9,21 @@ import MyProjects from './MyProjects';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Body = () => {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // Simulate loading time (e.g., data fetching or other async tasks)
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 500); // Adjust timeout as needed
+
+        return () => clearTimeout(timer); // Clean up on component unmount
+    }, []);
+
+    if (loading) {
+        return <div className="loading-message">Loading...</div>; // Loading indicator
+    }
+
     return (
         <div className='body' id="home">
             <div className="main-content">

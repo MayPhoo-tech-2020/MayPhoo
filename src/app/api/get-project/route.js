@@ -9,7 +9,7 @@ export async function GET(request) {
 
   try {
     // Introduce a short delay (adjust as needed for testing)
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise(resolve => setTimeout(resolve, 1000));
 
     // Fetch pets from the database
     const { rows: data } = await sql`SELECT * FROM Project ORDER BY id ASC;`;
