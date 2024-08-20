@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 import React, { useEffect, useState } from 'react';
 import './MyExperience.css';
@@ -15,12 +15,12 @@ const MyExperience = () => {
             try {
                 const response = await fetch(`${baseURL}/api/get-experience`);
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error(`Network response was not ok: ${response.statusText}`);
                 }
                 const data = await response.json();
                 setExperiences(data.data);
             } catch (err) {
-                setError('Failed to fetch experiences');
+                setError(`Failed to fetch experiences: ${err.message}`);
                 console.error('Error fetching experiences:', err);
             } finally {
                 setLoading(false);

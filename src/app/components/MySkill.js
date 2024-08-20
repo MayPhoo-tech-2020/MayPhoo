@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 import React, { useEffect, useState } from 'react';
 import './MySkill.css';
@@ -13,12 +13,14 @@ const MySkill = () => {
     useEffect(() => {
         const fetchSkills = async () => {
             try {
+                console.log(`Fetching skills from ${baseURL}/api/get-skill`);
                 const response = await fetch(`${baseURL}/api/get-skill`);
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error(`Network response was not ok: ${response.statusText}`);
                 }
                 const data = await response.json();
-                
+                console.log('Fetched skills data:', data);
+
                 const groupedSkills = data.data.reduce((acc, skill) => {
                     if (!acc[skill.category]) {
                         acc[skill.category] = [];
@@ -29,7 +31,7 @@ const MySkill = () => {
 
                 setSkills(groupedSkills);
             } catch (err) {
-                setError('Failed to fetch skills');
+                setError(`Failed to fetch skills: ${err.message}`);
                 console.error('Error fetching skills:', err);
             } finally {
                 setLoading(false);
