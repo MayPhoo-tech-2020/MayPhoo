@@ -25,10 +25,11 @@ const MyExperience = () => {
     if (error) {
         return <div className="error-message">{error}</div>;
     }
-
+/*
     if (experiences.length === 0) {
         return <div>Loading...</div>;
     }
+        */
 
     const splitSentences = (text) => {
         return text
