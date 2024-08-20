@@ -1,7 +1,9 @@
-'use client';
+// "use client";
 
 import React, { useEffect, useState } from 'react';
 import './MyExperience.css';
+
+const baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
 
 const MyExperience = () => {
     const [experiences, setExperiences] = useState([]);
@@ -10,7 +12,10 @@ const MyExperience = () => {
     useEffect(() => {
         const fetchExperiences = async () => {
             try {
-                const response = await fetch('http://localhost:3000/api/get-experience');
+                const response = await fetch(`${baseURL}/api/get-experience`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
                 const data = await response.json();
                 setExperiences(data.data);
             } catch (err) {
@@ -26,13 +31,11 @@ const MyExperience = () => {
         return <div className="error-message">{error}</div>;
     }
 
-
-
     const splitSentences = (text) => {
         return text
-            .split(/(?<=\.)\s*|\n+/) // Split by period followed by whitespace or newline
-            .filter(sentence => sentence.trim() !== "") // Remove empty sentences
-            .map((sentence, index) => <li key={index}>{sentence.trim()}</li>); // Create list items
+            .split(/(?<=\.)\s*|\n+/)
+            .filter(sentence => sentence.trim() !== "")
+            .map((sentence, index) => <li key={index}>{sentence.trim()}</li>);
     };
 
     return (

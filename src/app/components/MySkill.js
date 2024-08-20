@@ -1,6 +1,9 @@
-"use client";
+// "use client";
+
 import React, { useEffect, useState } from 'react';
 import './MySkill.css';
+
+const baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
 
 const MySkill = () => {
     const [skills, setSkills] = useState([]);
@@ -9,10 +12,12 @@ const MySkill = () => {
     useEffect(() => {
         const fetchSkills = async () => {
             try {
-                const response = await fetch('http://localhost:3000/api/get-skill');
+                const response = await fetch(`${baseURL}/api/get-skill`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
                 const data = await response.json();
-
-                // Group skills by category
+                
                 const groupedSkills = data.data.reduce((acc, skill) => {
                     if (!acc[skill.category]) {
                         acc[skill.category] = [];
@@ -36,7 +41,7 @@ const MySkill = () => {
     }
 
     return (
-        <div className="partthree">      
+        <div className="partthree">
             <section>
                 {Object.keys(skills).map(category => (
                     <div key={category} className="skills-container">
