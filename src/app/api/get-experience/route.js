@@ -9,14 +9,10 @@ export async function GET(request) {
 
   try {
     // Introduce a short delay (adjust as needed for testing)
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 500));
 
     // Fetch pets from the database
-<<<<<<< HEAD
-    const { rows: data } = await sql`SELECT * FROM Experience ORDER BY id ASC;`;
-=======
     const { rows: data } = await sql`SELECT * FROM Experience ORDER BY id DESC;`;
->>>>>>> cdbf648 (Updated project details page and sort data by id in descending)
 
     // Log the fetched data
    // console.log('Fetched test:', data);
