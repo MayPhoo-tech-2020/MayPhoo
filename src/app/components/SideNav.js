@@ -9,8 +9,8 @@ const SideNav = () => {
             </a>
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#skill">My Skill</a>
             <a href="#experience">My Experience</a>
+            <a href="#skill">My Skill</a>
             <a href="#project">Projects</a>
         </div>
     );

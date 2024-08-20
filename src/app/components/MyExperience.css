@@ -1,10 +1,10 @@
 /* Base Styles */
 
 .partfour {
-    width: 80%;
+    width: 90%;
     max-width: 1200px; /* Optional: limits the maximum width */
-    height: auto;
     margin: 0 auto;
+    padding: 20px; /* Add some padding */
 }
 
 .experience-container {
@@ -26,9 +26,14 @@
 
 .experience-header {
     display: flex;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+}
+
+.experience-info {
+    flex: 1;
+    margin-left: 20px;
 }
 
 .experience-header h5 {
@@ -37,7 +42,7 @@
 }
 
 .experience-logo {
-    width: 200px; /* Adjust size as needed */
+    max-width: 100%; /* Make sure the image scales down on smaller screens */
     height: auto;
 }
 

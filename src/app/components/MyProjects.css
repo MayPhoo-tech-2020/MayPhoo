@@ -1,49 +1,33 @@
-.partfive {
-    width: 80%;
+/* Base Styles */
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Optional: limits the maximum width */
     margin: 0 auto;
     padding: 20px;
-    text-align: center;
-    color: #000; /* Ensure text color is set */
-    transition: all 0.3s ease-in-out;
-}
-
-.projects-list {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
 }
 
-.project-item {
-    text-align: center;
-    width: 200px; /* Adjust width as needed */
-    padding: 10px;
-}
-
-.project-img {
-    width: 100%;
-    height: auto;
-    border: 2px solid white; /* Add border to each image */
-    padding: 10px; /* Add padding inside the border */
-    border-radius: 10px; /* Optional: round the corners of the images */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Floating shadow effect */
+.card {
+    width: 300px;
+    background-color: #ffffff;
+    border: 2px solid #cccccc; /* Light grey border */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Light shadow */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
 }
 
-.project-img:hover {
+.card:hover {
     transform: translateY(-10px); /* Slight floating effect on hover */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-@media (max-width: 768px) {
-    .projects-list {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: center;
-    }
-
-    .project-item {
-        width: 100%; /* Adjust width for smaller screens */
-    }
+.card-container {
+    padding: 20px;
 }
 
 .card-body .detail-button {
@@ -51,26 +35,66 @@
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 13px;
+    font-size: 14px;
     cursor: pointer;
     border-radius: 20px;
     transition: background-color 0.3s;
-    margin: 0;
-   
+    margin-top: 10px;
 }
-.card-description{
-    width: 100%;
+
+.card-description {
     height: 230px;
+    overflow-y: auto; /* Allows scrolling if content is too long */
 }
-.div-card-title{
-    height: 50px;
+
+.div-card-title {
+    margin-bottom: 10px;
 }
-.card-container {
-    transition: box-shadow 0.3s ease-in-out;
-    border-radius: 16px; /* Adjust the value to make the edges more rounded */
-  }
-  
-  .card-container:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2);
-  }
-  
+
+.card-title {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center;
+    }
+
+    .card {
+        width: 100%; /* Adjust width for smaller screens */
+    }
+
+    .card-title {
+        font-size: 1.25rem; /* Adjust font size for smaller screens */
+    }
+
+    .card-text {
+        font-size: 0.875rem; /* Adjust font size for smaller screens */
+    }
+
+    .card-body .detail-button {
+        font-size: 12px; /* Adjust button font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-title {
+        font-size: 1rem; /* Adjust font size for very small screens */
+    }
+
+    .card-text {
+        font-size: 0.75rem; /* Adjust font size for very small screens */
+    }
+
+    .card-body .detail-button {
+        font-size: 11px; /* Adjust button font size for very small screens */
+    }
+}

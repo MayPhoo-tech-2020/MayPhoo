@@ -49,7 +49,7 @@ const MyExperience = () => {
                                 alt={experience.company_name} 
                                 className="experience-logo" 
                             />
-                            <div>
+                            <div className="experience-info">
                                 <h2 className="experience-title">
                                     {experience.company_name}, {experience.job_title}
                                 </h2>
