@@ -46,13 +46,18 @@ const MyProjects = () => {
     <div className="container" style={{ textAlign: 'center', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '50px' }}>
       {projects.map((project) => (
         <div key={project.id} className="card" style={{ width: '20rem' }}>
+<<<<<<< HEAD
           {/* 
           <Image 
+=======
+    {/*  <Image 
+>>>>>>> cdbf648 (Updated project details page and sort data by id in descending)
             src={`/assets/images/${project.image}`} 
             width={150} 
             height={150} 
             className="card-img-top" 
             alt={project.title} 
+<<<<<<< HEAD
           /> 
           */}
           <div className="card-container card-body">
@@ -69,6 +74,26 @@ const MyProjects = () => {
               View Details
             </button>
           </div>
+=======
+          />
+          */
+      }
+          <div className="card-container card-body">
+  <div className="div-card-title">
+    <h5 className="card-title">{project.title}</h5>
+  </div>
+  <div className="card-description">
+    <p className="card-text">{project.description}</p>
+  </div>
+  <button 
+    className="detail-button" 
+    onClick={() => handleClick(project.id)}
+  >
+    View Details
+  </button>
+</div>
+
+>>>>>>> cdbf648 (Updated project details page and sort data by id in descending)
         </div>
       ))}
     </div>

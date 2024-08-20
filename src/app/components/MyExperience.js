@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // "use client";
+=======
+'use client';
+>>>>>>> cdbf648 (Updated project details page and sort data by id in descending)
 
 import React, { useEffect, useState } from 'react';
 import './MyExperience.css';
