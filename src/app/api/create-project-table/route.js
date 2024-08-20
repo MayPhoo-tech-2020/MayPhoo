@@ -15,7 +15,7 @@ export async function POST() {
         Technologies varchar (255),
         Languages varchar(255),
         Contributions varchar(500),
-        GitHubLink varchar(255)
+         varchar(255)
 
       );
     `;

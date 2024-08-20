@@ -11,8 +11,9 @@ const MyProjects = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const router = useRouter();
-  const handleClick = () => {
-    router.push('/project-details'); // Replace '/next-page' with the actual path to your next page
+
+  const handleClick = (id) => {
+    router.push(`/project-details/${id}`); // Replace '/next-page' with the actual path to your next page
   };
 
   useEffect(() => {
@@ -44,20 +45,29 @@ const MyProjects = () => {
 
   return (
     <div className="container" style={{ textAlign: 'center', display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '50px' }}>
-    {projects.map((project) => (
-      <div key={project.id} className="card" style={{ width: '20rem' }}>
-        {/* If you have a project image URL, replace the src with project.imageURL */}
-        <Image  src={`/assets/images/${project.image}`}  width={150} height={150} className="card-img-top" alt={project.title} />
-        <div className="card-body">
-          <h5 className="card-title">{project.title}</h5>
-          <p className="card-text">{project.description}</p>
-          <button className="detail-button" onClick={handleClick}>View Details</button>
-          <button className="detail-button"><a href={`${project.githublink}`} > Go To GitHub </a></button>
+      {projects.map((project) => (
+        <div key={project.id} className="card" style={{ width: '20rem' }}>
+          <Image 
+            src={`/assets/images/${project.image}`} 
+            width={150} 
+            height={150} 
+            className="card-img-top" 
+            alt={project.title} 
+          />
+          <div className="card-body">
+            <h5 className="card-title">{project.title}</h5>
+            <p className="card-text">{project.description}</p>
+            {/* Use an arrow function to pass the project.id */}
+            <button 
+              className="detail-button" 
+              onClick={() => handleClick(project.id)}
+            >
+              View Details
+            </button>
+          </div>
         </div>
-      </div>
-    ))}
-  </div>
-  
+      ))}
+    </div>
   );
 };
 
