@@ -12,7 +12,7 @@
 }
 
 .card {
-    width: 300px;
+    width: 340px;
     background-color: #ffffff;
     border: 2px solid #cccccc; /* Light grey border */
     border-radius: 16px; /* Rounded corners */
@@ -30,7 +30,7 @@
     padding: 20px;
 }
 
-.card-body .detail-button {
+.card-container .detail-button {
     background-color: #8B4513;
     color: white;
     border: none;
@@ -44,7 +44,7 @@
 
 .card-description {
     height: 230px;
-    overflow-y: auto; /* Allows scrolling if content is too long */
+    margin-bottom: 3px;
 }
 
 .div-card-title {
@@ -80,7 +80,7 @@
         font-size: 0.875rem; /* Adjust font size for smaller screens */
     }
 
-    .card-body .detail-button {
+    .card-container .detail-button {
         font-size: 12px; /* Adjust button font size for smaller screens */
     }
 }
@@ -94,7 +94,7 @@
         font-size: 0.75rem; /* Adjust font size for very small screens */
     }
 
-    .card-body .detail-button {
+    .card-container .detail-button {
         font-size: 11px; /* Adjust button font size for very small screens */
     }
 }
