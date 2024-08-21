@@ -1,77 +1,72 @@
-/* SideNav.css */
 .sidenav {
     position: fixed;
     width: 12%;
     height: 100%;
-    background-color: #ffffff; /* Ensure solid background color */
+    background-color: #ffffff;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
-   /* Optional: add a shadow for better separation */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Smooth slide-in effect */
 }
 
-.sidenav a {
+.sidenav a.nav-link {
     padding: 10%;
     text-decoration: none;
-    font-size: clamp(0.8rem, 2vw, 1.2rem); /* Responsive font size */
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
     color: black;
     display: block;
     text-align: center;
     margin-top: 20px;
-    transition: background-color 0.3s; /* Optional: smooth background color transition */
+    transition: background-color 0.3s;
 }
 
-
-
 .sidenav .nav-img {
-    width: 80%; /* Adjusted width for responsiveness */
+    width: 80%;
     height: auto;
     margin-bottom: 7%;
 }
 
-/* Responsive styles */
+.menu-toggle {
+    display: none; /* Hide the button by default */
+}
+
 @media (max-width: 768px) {
     .sidenav {
-        width: 100%;
-        height: auto;
+        width: 18%; /* Adjusted width for mobile */
+        height: 100%;
+        transform: translateX(-100%); /* Initially hidden */
         top: 0;
         left: 0;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        padding: 10px 0;
-        box-shadow: none; /* Optional: remove shadow on smaller screens */
     }
 
-    .sidenav a {
-        margin-top: 0;
-        font-size: clamp(0.6rem, 3vw, 1rem); /* Adjusted for smaller screens */
-        padding: 5%; /* Adjust padding for smaller screens */
-        margin-bottom: 0%;
+    .sidenav.open {
+        transform: translateX(0); /* Slide in when open */
     }
 
-    .sidenav .nav-img {
-        width: 50px;
-    }
-    
     .menu-toggle {
-        display: block;
+        display: block; /* Show the toggle button */
         position: fixed;
         top: 10px;
         left: 10px;
-        background-color: #fff;
+        background-color: #8B4513;
+        color:#ffffff;
         border: none;
         padding: 10px;
         cursor: pointer;
         z-index: 1000;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
-}
 
-@media (min-width: 769px) {
-    .menu-toggle {
-        display: none;
+    .sidenav a.nav-link {
+        margin-top: 10px;
+        font-size: clamp(0.6rem, 3vw, 1rem);
+        padding: 5%;
+        margin-bottom: 0;
+    }
+
+    .sidenav .nav-img {
+        width: 50px;
     }
 }
