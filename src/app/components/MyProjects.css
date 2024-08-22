@@ -1,7 +1,7 @@
 /* Base Styles */
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px; /* Optional: limits the maximum width */
     margin: 0 auto;
     padding: 20px;
@@ -13,7 +13,7 @@
 }
 
 .card {
-    width: 340px;
+    width: 350px;
     background-color: #ffffff;
     border: 2px solid #cccccc; /* Light grey border */
     border-radius: 16px; /* Rounded corners */
@@ -45,12 +45,13 @@
 }
 
 .card-description {
-    height: 230px;
+    height: 250px;
     margin-bottom: 3px;
 }
 
 .div-card-title {
     margin-bottom: 10px;
+    height: 50px;
 }
 
 .card-title {
@@ -68,6 +69,7 @@
     .container {
         flex-direction: column; /* Stack cards vertically on smaller screens */
         align-items: center;
+        margin-left: 10%;
         padding-top: 100px; /* Adjust top padding for smaller screens */
     }
 
@@ -89,6 +91,17 @@
 }
 
 @media (max-width: 480px) {
+    .container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center;
+        margin-left: 10%;
+        padding-top: 100px; /* Adjust top padding for smaller screens */
+    }
+
+    .card {
+        width: 100%; /* Adjust width for smaller screens */
+    }
+
     .card-title {
         font-size: 1rem; /* Adjust font size for very small screens */
     }

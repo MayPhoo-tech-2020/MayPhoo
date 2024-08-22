@@ -101,16 +101,16 @@
 
 @media (max-width: 480px) {
     .experience-title {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
     .experience-header h5 {
-        font-size: 0.875rem; /* Adjust as needed */
+        font-size: 0.87rem; /* Adjust as needed */
     }
 
     .experience-description,
     .experience-list,
     .experience-details {
-        font-size: 0.75rem; /* Adjust as needed */
+        font-size: 0.7rem; /* Adjust as needed */
     }
 }
