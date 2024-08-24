@@ -16,9 +16,6 @@ const Body = () => {
 
                 <h2 id="about">About Me</h2>
                 <AboutMe/>
-                <hr className='line'/>
-                <h2 id="experience">My Experience</h2>
-                <MyExperience/>
                 <hr className="line" />
 
                 <h2 id="skill">My Skill</h2>
@@ -27,6 +24,10 @@ const Body = () => {
 
                 <h2 id="project">My Projects</h2>
                 <MyProjects/>
+                <hr className='line'/>
+                <h2 id="experience">My Experience</h2>
+                <MyExperience/>
+                
             </div>
         </div>
     );
