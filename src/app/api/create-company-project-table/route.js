@@ -1,4 +1,3 @@
-//http://localhost:3000/api/create-project-table
 'use server';
 
 import { sql } from '@vercel/postgres';
@@ -7,14 +6,14 @@ import { NextResponse } from 'next/server';
 export async function POST() {
   try {
     const result = await sql`
-      CREATE TABLE Project (
+      CREATE TABLE CompanyProject(
         id SERIAL PRIMARY KEY,
-        Title varchar(255),
-        Image varchar(100),
-        Description varchar(300),
-        Technologies varchar (255),
-        Languages varchar(255),
-        Contributions varchar(500),
+        Title VARCHAR(255),
+        Image VARCHAR(100),
+        Description VARCHAR(300),
+        Technologies VARCHAR(255),
+        Languages VARCHAR(255),
+        Contributions VARCHAR(500),
         GitHubLink VARCHAR(500)
       );
     `;

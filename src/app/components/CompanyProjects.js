@@ -11,9 +11,7 @@ const MyProjects = () => {
   const [error, setError] = useState(null);
   const router = useRouter();
 
-  const handleClick = (id) => {
-    router.push(`/project-details/${id}`); // Replace '/project-details' with the actual path to your next page
-  };
+
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -21,7 +19,7 @@ const MyProjects = () => {
         // Simulate network delay
         await new Promise(resolve => setTimeout(resolve, 100));
 
-        const response = await axios.get('/api/get-project', {
+        const response = await axios.get('/api/get-company-project', {
           headers: { 'Cache-Control': 'no-cache' },
         });
 
@@ -61,12 +59,13 @@ const MyProjects = () => {
             <div className="card-description">
               <p className="card-text">{project.description}</p>
             </div>
-            <button 
-              className="detail-button" 
-              onClick={() => handleClick(project.id)}
-            >
-              View Details
-            </button>
+            <a href={project.githublink}
+              target="_blank" rel="noopener noreferrer">
+  <button className="detail-button">
+    Go To PlayStore
+  </button>
+</a>
+
           </div>
         </div>
       ))}

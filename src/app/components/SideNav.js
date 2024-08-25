@@ -20,10 +20,11 @@ const SideNav = () => {
                 </a>
                 <a href="#home" className="nav-link">Home</a>
                 <a href="#about" className="nav-link">About</a>
-                <a href="#skill" className="nav-link">My Skill</a>
-                <a href="#project" className="nav-link">Personal Projects</a>
                 <a href="#experience" className="nav-link">My Experience</a>
                 <a href="#company-project" className="nav-link">Company Projects</a>
+                <a href="#skill" className="nav-link">My Skill</a>
+                <a href="#project" className="nav-link">Personal Projects</a>
+                
                
             </div>
         </>
