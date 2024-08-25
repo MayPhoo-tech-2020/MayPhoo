@@ -10,8 +10,7 @@ return(
         <p className='intro'>Hello, I&apos;m</p>
         <h2>May Phoo Wint Zay Oo</h2>
         <div className='intro-txt'>
-            <p>I am A Blogger. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <p>Hello, I'm a Full-Stack Developer with a passion for creating seamless and efficient web applications. I enjoy tackling challenges that require both front-end creativity and back-end precision, always striving to deliver robust and scalable solutions.</p>
         </div>
         <div className="buttons-container">
             <a href="/assets/document/mayphoowintzayooresume.pdf" download>
