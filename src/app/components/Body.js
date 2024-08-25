@@ -5,6 +5,7 @@ import AboutMe from './AboutMe';
 import MySkill from './MySkill';
 import MyExperience from './MyExperience';
 import MyProjects from './MyProjects';
+import CompanyProjects from './CompanyProjects';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Body = () => {
@@ -22,11 +23,15 @@ const Body = () => {
                 <MySkill/>
                 <hr className="line" />
 
-                <h2 id="project">My Projects</h2>
+                <h2 id="project">Personal Projects</h2>
                 <MyProjects/>
                 <hr className='line'/>
                 <h2 id="experience">My Experience</h2>
                 <MyExperience/>
+                <hr className='line'/>
+                <h2 id="company-project">Company Projects</h2>
+                <CompanyProjects/>
+                
                 
             </div>
         </div>

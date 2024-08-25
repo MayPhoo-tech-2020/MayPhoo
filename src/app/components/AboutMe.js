@@ -10,8 +10,7 @@ const AboutMe = () =>{
                     </div>
                     <div className="parttwo-content">
                         <h2>Full Stack Developer</h2>
-                        <p>I am A Blogger. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                        <p>I am a Full-Stack Developer. I specialize in building complete, end-to-end applications, seamlessly integrating the front and back ends. My work is focused on creating smooth, user-friendly experiences while ensuring that the underlying systems are robust and efficient.</p>
                         <div className="txt-list">
                             <ul>
                                 <li><img src="/assets/images/name.png" alt="Name" /> <b>Name:&nbsp;</b> May Phoo Wint Zay Oo</li>
