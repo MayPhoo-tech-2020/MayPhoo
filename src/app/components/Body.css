@@ -1,41 +1,134 @@
+/* Body Styling */
 .body {
     margin-left: 12%;
     width: 88%;
     display: flex;
     flex-direction: column;
     padding: 2%;
-    background-color: #ffffff;
-    color: #000; /* Ensure text color is set */
+    background-color: #F2F2F2; /* Light grey background */
+    color: #333333; /* Dark grey text */
+    font-family: 'Arial', sans-serif;
 }
 
+/* Main Content Styling */
 .main-content {
     flex-grow: 1;
-    background-color: #ffffff;
+    background-color: #FFFFFF; /* White background for content */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    color: #000; /* Ensure text color is set */
+    color: #333333; /* Dark grey text */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
+/* Line Separator */
 .line {
     border: 0;
     height: 1px;
-    background: #333;
-    margin: 20px 0;
-    width: 100%;
+    background: #2F4F4F; /* Dark green for line color */
+    margin: 30px 0;
+    width: 80%;
 }
 
-h2{
+/* Section Titles */
+h2 {
     margin-top: 1%;
+    color: #2F4F4F; /* Dark green for section titles */
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-#project{
+
+/* Section Specific Margins */
+#project,
+#company-project {
     margin-top: 2%;
 }
-#company-project{
-    margin-top: 2%;
+
+/* Button Styling */
+.resume-button {
+    background-color: #B87333; /* Copper color */
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
 }
 
+.resume-button:hover {
+    background-color: #A0522D; /* Darker copper on hover */
+}
 
+/* Responsive Styling for Tablets and Mobile Devices */
+@media (max-width: 1024px) {
+    .body {
+        margin-left: 8%;
+        width: 92%;
+    }
 
+    .main-content {
+        padding: 15px;
+    }
 
+    .line {
+        width: 90%; /* Adjust line width for larger tablets */
+    }
+
+    h2 {
+        font-size: 20px; /* Slightly smaller font size for h2 on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .body {
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .line {
+        width: 95%; /* Wider line width for smaller screens */
+    }
+
+    h2 {
+        font-size: 18px; /* Smaller font size for h2 on mobile devices */
+    }
+
+    .resume-button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .body {
+        margin-left: 2%;
+        width: 96%;
+    }
+
+    .main-content {
+        padding: 5px;
+    }
+
+    .line {
+        width: 100%; /* Full width line on very small screens */
+    }
+
+    h2 {
+        font-size: 16px; /* Further reduced font size for h2 */
+    }
+
+    .resume-button {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+}

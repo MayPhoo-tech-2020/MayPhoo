@@ -1,82 +1,116 @@
+/* Side Navigation Styling */
 .sidenav {
     position: fixed;
-    width: 12%; /* Default width for larger screens */
+    width: 12%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: #2F4F4F; /* Dark green background */
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    overflow-y: auto; /* Allow scrolling if content overflows */
-    transform: translateX(0); /* Default position */
-    z-index: 1000; /* Ensure the navbar is on top */
+    overflow-y: auto;
+    transform: translateX(0);
+    z-index: 1000;
 }
 
 .sidenav a.nav-link {
-    padding: 10px; /* Adjust padding for better spacing */
+    padding: 10px;
     text-decoration: none;
     font-size: clamp(0.8rem, 2vw, 1.2rem);
-    color: black;
+    color: #FFFFFF; /* White text */
     display: block;
     text-align: center;
-    margin-top: 20px; /* Space between links */
-    transition: background-color 0.3s;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px; /* Rounded corners for better aesthetics */
+}
+
+.sidenav a.nav-link:hover {
+    background-color: #8B4513; /* Copper background on hover */
+    color: #FFFFFF; /* Ensure text is white on hover */
 }
 
 .sidenav .nav-img {
-    width: 80%;
+    width: 60%; /* Adjusted for better responsiveness */
     height: auto;
-    margin-bottom: 7%; /* Space below the logo */
+    margin-bottom: 7%;
+    border-radius: 50%; /* Circular logo */
+    border: 2px solid #FFFFFF; /* White border around the logo */
 }
 
+/* Toggle Button Styling */
 .menu-toggle {
-    display: none; /* Hide the button by default */
+    display: none; /* Hidden by default */
+}
+
+@media (max-width: 1024px) {
+    .sidenav {
+        width: 15%;
+    }
+
+    .sidenav .nav-img {
+        width: 70px; /* Adjusted size for tablets */
+    }
 }
 
 @media (max-width: 768px) {
     .sidenav {
-        width: 20%; /* Further reduce width for mobile view */
-        transform: translateX(-100%); /* Initially hidden */
+        width: 20%;
+        transform: translateX(-100%);
         top: 0;
         left: 0;
-        z-index: 1000; /* Ensure the navbar is on top */
     }
 
     .sidenav.open {
-        transform: translateX(0); /* Slide in when open */
+        transform: translateX(0);
     }
 
     .menu-toggle {
-        display: block; /* Show the toggle button */
+        display: block;
         position: fixed;
         top: 10px;
         left: 10px;
-        background-color: #8B4513;
+        background-color: #8B4513; /* Copper background */
         color: #ffffff;
         border: none;
         padding: 10px;
         cursor: pointer;
-        z-index: 1001; /* Ensure the button is on top */
+        z-index: 1001;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        border-radius: 5px; /* Rounded corners */
+        font-size: 24px; /* Larger font size for better visibility */
     }
 
     .sidenav a.nav-link {
-        margin-top: 10px; /* Space between links on mobile */
+        margin-top: 10px;
         font-size: clamp(0.6rem, 3vw, 1rem);
-        padding: 5%; /* Adjust padding for mobile */
-        margin-bottom: 0; /* Remove bottom margin on mobile */
+        padding: 5%;
+        margin-bottom: 0;
     }
 
     .sidenav .nav-img {
-        width: 50px; /* Adjust logo size for mobile */
+        width: 50px;
+        border: none; /* Remove border on mobile */
+    }
+
+    /* Adjust content margin on mobile */
+    .content.shifted {
+        margin-left: 20%;
     }
 }
 
+@media (max-width: 480px) {
+    .sidenav {
+        width: 25%;
+    }
 
-@media (max-width: 768px) {
-    .main-content {
-        margin-left: 20%; /* Adjusted for mobile */
+    .sidenav .nav-img {
+        width: 40px; /* Further reduced size for small screens */
+    }
+
+    .menu-toggle {
+        font-size: 20px; /* Slightly smaller font size for very small screens */
     }
 }

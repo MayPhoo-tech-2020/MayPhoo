@@ -14,7 +14,6 @@ const Body = () => {
             <div className="main-content">
                 <Intro/>
                 <hr className="line" />
-
                 <h2 id="about">About Me</h2>
                 <AboutMe/>
                 <hr className='line'/>
@@ -27,12 +26,8 @@ const Body = () => {
                 <h2 id="skill">Skill</h2>
                 <MySkill/>
                 <hr className="line" />
-
                 <h2 id="project">Personal Projects</h2>
                 <MyProjects/>
-               
-                
-                
             </div>
         </div>
     );
