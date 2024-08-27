@@ -7,7 +7,7 @@ const Intro = () => {
       <section className="intro-section">
         <img src="/assets/images/mayphooprofile.jpg" alt="Home" className="partone-img" />
         <div className="partone-content">
-          <p className="intro">Hello, I&apos;m</p>
+          <p className="intro"><b>Hello, I&apos;m</b></p>
           <h2>May Phoo Wint Zay Oo</h2>
           <div className="intro-txt">
             <p>
