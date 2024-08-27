@@ -1,143 +1,148 @@
-.parttwo-container {
+/* Main container styling */
+.aboutme {
+    padding: 40px;
+    background-color: #f9f9f9;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Flex container for image and text */
+.aboutme-container {
+    display: flex;
     flex-wrap: wrap;
-    margin-right: 5%;
-    padding: 20px; /* Add padding for better spacing */
+    align-items: center;
+    max-width: 1200px;
+    gap: 20px;
+    width: 100%; /* Ensure it uses full width */
 }
 
-.aboutme-title {
-    text-align: center;
-    margin-bottom: 1%;
-    color: #000; /* Ensure text color is set */
-}
-
-.parttwo-img {
+/* Image styling */
+.aboutme-image {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3%;
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    margin-bottom: 20px; /* Space below the image */
 }
 
-.parttwo-img img {
+.aboutme-image img {
     width: 100%;
     max-width: 300px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.parttwo-content {
-    flex: 1;
+/* Card styling for text with transparent background */
+.aboutme-text {
+    flex: 2;
+    max-width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    font-size: 13px;
-    color: #000; /* Ensure text color is set */
-    padding: 20px; /* Add padding for better spacing */
+    align-items: center; /* Center align text */
+    text-align: center; /* Center align text */
 }
 
-.parttwo-content h2 {
-    margin-bottom: 5%;
-    color: #000; /* Ensure text color is set */
+/* Title styling */
+.aboutme-title {
+    margin-bottom: 15px;
+    color: #8B4513;
 }
 
-.parttwotxtcolor {
-    color: #333;
-}
-
-.intro-txt {
-    max-width: 600px;
-    margin: 5px 0;
+/* Paragraph styling */
+.aboutme-p {
+    font-size: 16px; /* Adjusted for better readability */
+    line-height: 1.6; /* Slightly reduced line height */
+    color: #2F4F4F;
+    margin-bottom: 20px;
     text-align: center;
-    font-size: 13px;
-    color: #000; /* Ensure text color is set */
+    max-width: 600px; /* Max width for better text alignment */
 }
 
-.txt-list {
+/* Information section styling */
+.aboutme-info {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    gap: 10px; /* Reduced space between info items */
 }
 
-.txt-list ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.txt-list li {
-    margin-top: 10%;
-    font-size: 13px;
-    color: #000; /* Ensure text color is set */
+.info-item {
     display: flex;
     align-items: center;
+    color: #2F4F4F;
 }
 
-.txt-list li img {
-    width: 20px; /* Adjust the size of the icons */
-    height: 20px;
-    margin-right: 7px;
+.info-item img {
+    width: 20px; /* Slightly smaller logo */
+    height: 20px; /* Slightly smaller logo */
+    margin-right: 8px; /* Reduced space between logo and text */
 }
+
+.info-item span {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.info-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
-    .body {
-        margin-top: 20%;
-        margin-left: 3%;
-        width: 88%;
+    .aboutme-container {
         flex-direction: column;
+        text-align: center;
+    }
+   
+    .aboutme-image img {
+        max-width: 250px;
     }
 
-    .parttwo-img img {
-        width: 135px;
-        height: 156px;
-        border-radius: 10px;
-        margin-top: 35%;
+    .aboutme-text {
+        max-width: 100%;
+    }
+
+    .aboutme-p {
+        font-size: 14px; /* Slightly larger font size on tablets */
+    }
+
+    .info-item img {
+        width: 18px; /* Smaller logo for better fit */
+        height: 18px; /* Smaller logo for better fit */
+    }
+    .info-item span {
+        font-size: 10px;
     }
 }
 
 @media (max-width: 480px) {
-    .parttwo-content p,
-    .txt-list li {
-        font-size: 12px;
+    .aboutme-title {
+        font-size: 20px;
     }
 
-    .parttwo-content h2 {
-        font-size: 18px;
-    }
-    .parttwo h2 {
-        margin-top: 10%;
-    }
-    .parttwo-img img {
-        margin-top: 10%;
-    }
-    .resume-button {
-        padding: 8px 16px;
-        font-size: 12px;
+    .info-item img {
+        width: 16px; /* Even smaller logo */
+        height: 16px; /* Even smaller logo */
     }
 
-    .txt-list {
-        flex-direction: column;
-        gap: 10px; /* Increase gap for better spacing */
+    .info-item span {
+        font-size: 8px;
     }
 
-    .txt-list ul {
-        padding: 0;
-    }
-
-    .txt-list li {
-        margin-top: 10%;
-    }
-
-    .parttwo-content {
-        padding: 10px 20px; /* Adjust padding for better spacing on smaller screens */
-    }
-
-    .buttons-container {
-        flex-direction: column; /* Stack buttons vertically on small screens */
-        gap: 10px; /* Add space between buttons */
-    }
-
-    .buttons-container a {
-        margin-left: 0; /* Reset margin for better alignment */
+    .aboutme-p {
+        font-size: 12px; /* Slightly larger font size on small screens */
     }
 }

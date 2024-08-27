@@ -1,75 +1,62 @@
-/* Body Styling */
+
 .body {
-    margin-left: 12%;
-    width: 88%;
-    display: flex;
-    flex-direction: column;
-    padding: 2%;
-    background-color: #F2F2F2; /* Light grey background */
-    color: #333333; /* Dark grey text */
+   
+    width: 100%; 
+    padding: 0;
+    background-color: #F2F2F2; 
+    color: #333333;
     font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
 }
 
-/* Main Content Styling */
+
 .main-content {
-    flex-grow: 1;
-    background-color: #FFFFFF; /* White background for content */
+    background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    color: #333333; /* Dark grey text */
+    color: #333333; 
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 1200px;
+    box-sizing: border-box; 
 }
 
-/* Line Separator */
+
 .line {
     border: 0;
     height: 1px;
-    background: #2F4F4F; /* Dark green for line color */
+    background: #2F4F4F; 
     margin: 30px 0;
-    width: 80%;
+    width: 100%; 
 }
 
-/* Section Titles */
-h2 {
-    margin-top: 1%;
-    color: #2F4F4F; /* Dark green for section titles */
+
+.sub-title {
+    margin-top: 20px;
+    color: #8B4513; 
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* Section Specific Margins */
+
 #project,
 #company-project {
-    margin-top: 2%;
+    margin-top: 20px;
 }
 
-/* Button Styling */
-.resume-button {
-    background-color: #B87333; /* Copper color */
-    color: #FFFFFF;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background-color 0.3s;
-}
 
-.resume-button:hover {
-    background-color: #A0522D; /* Darker copper on hover */
-}
-
-/* Responsive Styling for Tablets and Mobile Devices */
 @media (max-width: 1024px) {
     .body {
-        margin-left: 8%;
-        width: 92%;
+        padding: 0 5%; 
     }
 
     .main-content {
@@ -77,18 +64,17 @@ h2 {
     }
 
     .line {
-        width: 90%; /* Adjust line width for larger tablets */
+        width: 100%; 
     }
 
-    h2 {
-        font-size: 20px; /* Slightly smaller font size for h2 on tablets */
+    .sub-title {
+        font-size: 20px; 
     }
 }
 
 @media (max-width: 768px) {
     .body {
-        margin-left: 5%;
-        width: 90%;
+        padding: 0 5%; 
     }
 
     .main-content {
@@ -96,23 +82,17 @@ h2 {
     }
 
     .line {
-        width: 95%; /* Wider line width for smaller screens */
+        width: 100%;
     }
 
-    h2 {
-        font-size: 18px; /* Smaller font size for h2 on mobile devices */
-    }
-
-    .resume-button {
-        padding: 8px 16px;
-        font-size: 12px;
+    .sub-title {
+        font-size: 18px; 
     }
 }
 
 @media (max-width: 480px) {
     .body {
-        margin-left: 2%;
-        width: 96%;
+        padding: 0; 
     }
 
     .main-content {
@@ -120,15 +100,10 @@ h2 {
     }
 
     .line {
-        width: 100%; /* Full width line on very small screens */
+        width: 100%;
     }
 
-    h2 {
-        font-size: 16px; /* Further reduced font size for h2 */
-    }
-
-    .resume-button {
-        padding: 6px 12px;
-        font-size: 10px;
+    .sub-title {
+        font-size: 16px; 
     }
 }

@@ -5,9 +5,11 @@
   align-items: center;
   padding: 40px;
   background: #2F4F4F; /* Dark green background */
-  color: #fff;
+ 
 }
-
+.intro{
+  color: #2F4F4F;
+}
 .intro-section {
   display: flex;
   flex-direction: row;
@@ -46,7 +48,7 @@
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
-  color: #FFFFFF; /* White text color */
+
 }
 
 .partone-content h2 {
