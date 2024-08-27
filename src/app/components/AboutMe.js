@@ -9,7 +9,7 @@ const AboutMe = () => {
                     <img src="/assets/images/mayphoo.jpg" alt="About Me" />
                 </div>
                 <div className="aboutme-text">
-                    <h4 className="aboutme-title">Full Stack Developer</h4>
+                    <h4 className="aboutme-title"><b>Full Stack Developer</b></h4>
                     <div>
                    
                     <p className='aboutme-p'>

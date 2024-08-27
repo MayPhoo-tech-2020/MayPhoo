@@ -16,6 +16,7 @@
     max-width: 1200px;
     gap: 20px;
     width: 100%; /* Ensure it uses full width */
+    animation: fadeInUp 1s ease-out; /* Fade in effect */
 }
 
 /* Image styling */
@@ -34,6 +35,12 @@
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.aboutme-image img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
 /* Card styling for text with transparent background */
@@ -48,12 +55,19 @@
     flex-direction: column;
     align-items: center; /* Center align text */
     text-align: center; /* Center align text */
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.5s forwards; /* Fade in effect with delay */
 }
 
 /* Title styling */
 .aboutme-title {
     margin-bottom: 15px;
     color: #8B4513;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.aboutme-title:hover {
+    color: #D2691E; /* Change color on hover */
 }
 
 /* Paragraph styling */
@@ -71,12 +85,19 @@
     display: flex;
     flex-direction: column;
     gap: 10px; /* Reduced space between info items */
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 1s forwards; /* Fade in effect with delay */
 }
 
 .info-item {
     display: flex;
     align-items: center;
     color: #2F4F4F;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.info-item:hover {
+    transform: translateX(5px); /* Slide slightly to the right on hover */
 }
 
 .info-item img {
@@ -144,5 +165,17 @@
 
     .aboutme-p {
         font-size: 12px; /* Slightly larger font size on small screens */
+    }
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

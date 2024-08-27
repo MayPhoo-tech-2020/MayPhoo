@@ -51,9 +51,9 @@ const MyExperience = () => {
                             />
                             <div className="experience-info">
                                 <h2 className="experience-title">
-                                    {experience.company_name}, {experience.job_title}
+                                    <b>{experience.company_name}, {experience.job_title}</b>
                                 </h2>
-                                <h5>{experience.location}</h5>
+                                <h5><b>{experience.location}</b></h5>
                             </div>
                         </div>
                         <hr className="experience-line" />

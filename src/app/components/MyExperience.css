@@ -2,115 +2,117 @@
 
 .partfour {
     width: 90%;
-    max-width: 1200px; /* Optional: limits the maximum width */
+    max-width: 1000px; /* Adjusted max width for a more compact layout */
     margin: 0 auto;
-    padding: 20px; /* Add some padding */
+    padding: 15px; /* Reduced padding */
+    color: #2F4F4F;
 }
 
 .experience-container {
     display: flex;
     flex-direction: column;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 15px auto; /* Reduced margin */
+    padding: 15px; /* Reduced padding */
     background-color: #ffffff;
-    border: 2px solid #cccccc; /* Light grey border */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Light shadow */
+    border: 1px solid #cccccc; /* Thinner border */
+    border-radius: 10px; /* Slightly less rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.1); /* Lighter shadow */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .experience-container:hover {
-    transform: translateY(-10px); /* Slight floating effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Slightly reduced hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 15px rgba(0, 0, 0, 0.2); /* Reduced hover shadow */
 }
 
 .experience-header {
     display: flex;
-    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
 
 .experience-info {
     flex: 1;
-    margin-left: 20px;
+    margin-left: 15px; /* Reduced margin */
 }
 
 .experience-header h5 {
     margin-top: 1%;
-    font-size: 1.25rem; /* Responsive font size */
+    font-size: 1rem; /* Reduced font size */
 }
 
 .experience-logo {
-    max-width: 100%; /* Make sure the image scales down on smaller screens */
+    max-width: 80px; /* Limited maximum width */
     height: auto;
+    margin-right: 10px; /* Add some space between image and text */
 }
 
 .experience-title {
-    font-size: 2rem; /* Responsive font size */
+    font-size: 1.5rem; /* Reduced font size */
     margin: 0;
 }
 
 .experience-line {
     border: 0;
-    height: 2px;
-    background: #333; /* Adjust color as needed */
-    margin: 20px 0;
+    height: 1px; /* Thinner line */
+    background: #333;
+    margin: 15px 0; /* Reduced margin */
     width: 100%;
 }
 
 .experience-description {
     text-align: left;
-    font-size: 1rem; /* Responsive font size */
+    font-size: 0.9rem; /* Reduced font size */
 }
 
 .experience-list {
     text-align: left;
-    margin-left: 3%;
-    font-size: 1rem; /* Responsive font size */
+    margin-left: 2%;
+    font-size: 0.9rem; /* Reduced font size */
 }
 
 .experience-details {
-    margin-left: 3%;
-    font-size: 1rem; /* Responsive font size */
+    margin-left: 2%;
+    font-size: 0.9rem; /* Reduced font size */
 }
 
 .error-message {
     color: red;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px; /* Reduced margin */
 }
 
 /* Responsive Font Sizes */
 
 @media (max-width: 768px) {
     .experience-title {
-        font-size: 1.5rem;
+        font-size: 1.2rem; /* Further reduced font size */
     }
 
     .experience-header h5 {
-        font-size: 1rem; /* Adjust as needed */
+        font-size: 0.875rem; /* Adjusted font size */
     }
 
     .experience-description,
     .experience-list,
     .experience-details {
-        font-size: 0.875rem; /* Adjust as needed */
+        font-size: 0.8rem; /* Adjusted font size */
     }
 }
 
 @media (max-width: 480px) {
     .experience-title {
-        font-size: 1.2rem;
+        font-size: 1rem; /* Further reduced font size */
     }
 
     .experience-header h5 {
-        font-size: 0.87rem; /* Adjust as needed */
+        font-size: 0.75rem; /* Adjusted font size */
     }
 
     .experience-description,
     .experience-list,
     .experience-details {
-        font-size: 0.7rem; /* Adjust as needed */
+        font-size: 0.7rem; /* Adjusted font size */
     }
 }

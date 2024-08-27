@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
-import './MyProjects.css';
+import './CompanyProjects.css';
 import Image from 'next/image';
 
 const MyProjects = () => {
@@ -42,7 +42,7 @@ const MyProjects = () => {
   return (
     <div className="container">
       {projects.map((project) => (
-        <div key={project.id} className="card d-flex flex-column">
+        <div key={project.id} className="card-company d-flex flex-column">
           <Image 
             src={`/assets/images/${project.image}`} 
             width={300} 
@@ -55,6 +55,15 @@ const MyProjects = () => {
               <h5 className="card-title">{project.title}</h5>
               <p className="card-text">{project.description}</p>
             </div>
+            <div className='card-tech'>
+                <p className='card-item'>
+                  <b>Technoloies:</b> {project.technologies}
+                </p>
+                <p className='card-item'>
+                  <b>Languages:</b> {project.languages}
+                </p>
+             
+              </div>
             <a href={project.githublink} target="_blank" rel="noopener noreferrer">
               <button className="btn btn-primary mt-2">
                 Go To PlayStore

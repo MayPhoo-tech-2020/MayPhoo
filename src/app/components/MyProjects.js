@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import './MyProjects.css'; 
+import Image from 'next/image';
 
 const MyProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -46,14 +47,14 @@ const MyProjects = () => {
     <div className="container">
       {projects.map((project) => (
         <div key={project.id} className="card">
-          {/* Uncomment the Image component if images are available */}
+         
           {/* <Image 
             src={`/assets/images/${project.image}`} 
             width={300} 
             height={200} 
             className="card-img-top" 
             alt={project.title} 
-          /> */}
+          />*/ }
           <div className="card-container">
             <div className="div-card-title">
               <h5 className="card-title">{project.title}</h5>
@@ -61,12 +62,26 @@ const MyProjects = () => {
             <div className="card-description">
               <p className="card-text">{project.description}</p>
             </div>
+            <div className='card-tech'>
+                <p className='card-item'>
+                  <b>Technoloies:</b> {project.technologies}
+                </p>
+                <p className='card-item'>
+                  <b>Languages:</b> {project.languages}
+                </p>
+             
+              </div>
             <button 
               className="detail-button" 
               onClick={() => handleClick(project.id)}
             >
               View Details
             </button>
+            <a href={project.githublink} target="_blank" rel="noopener noreferrer">
+              <button className="git-button">
+                Go To GitHub
+              </button>
+            </a>
           </div>
         </div>
       ))}
