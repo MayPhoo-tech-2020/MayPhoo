@@ -3,15 +3,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
-import './MyProjects.css'; 
+import './MyProjects.css';
+import Image from 'next/image';
 
 const MyProjects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const router = useRouter();
-
-
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -43,29 +42,24 @@ const MyProjects = () => {
   return (
     <div className="container">
       {projects.map((project) => (
-        <div key={project.id} className="card">
-          {/* Uncomment the Image component if images are available */}
-          {/* <Image 
+        <div key={project.id} className="card d-flex flex-column">
+          <Image 
             src={`/assets/images/${project.image}`} 
             width={300} 
-            height={200} 
-            className="card-img-top" 
+            height={170} 
+            className="card-img-top rounded-3" 
             alt={project.title} 
-          /> */}
-          <div className="card-container">
-            <div className="div-card-title">
+          /> 
+          <div className="card-body d-flex flex-column justify-content-between">
+            <div>
               <h5 className="card-title">{project.title}</h5>
-            </div>
-            <div className="card-description">
               <p className="card-text">{project.description}</p>
             </div>
-            <a href={project.githublink}
-              target="_blank" rel="noopener noreferrer">
-  <button className="detail-button">
-    Go To PlayStore
-  </button>
-</a>
-
+            <a href={project.githublink} target="_blank" rel="noopener noreferrer">
+              <button className="btn btn-primary mt-2">
+                Go To PlayStore
+              </button>
+            </a>
           </div>
         </div>
       ))}
