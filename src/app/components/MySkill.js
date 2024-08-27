@@ -1,10 +1,10 @@
-'use client';
-
+'use client'
 import React, { useEffect, useState } from 'react';
 import './MySkill.css';
 
 const MySkill = () => {
     const [skills, setSkills] = useState({});
+    const [loading, setLoading] = useState(true); // Loading state
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -26,8 +26,10 @@ const MySkill = () => {
                 }, {});
 
                 setSkills(groupedSkills);
+                setLoading(false); // Set loading to false when data is fetched
             } catch (err) {
                 setError('Failed to fetch skills');
+                setLoading(false); // Set loading to false on error
                 console.error('Error fetching skills:', err);
             }
         };
@@ -35,13 +37,17 @@ const MySkill = () => {
         fetchSkills();
     }, []);
 
+    if (loading) {
+        return <div className="loading-message">Loading...</div>;
+    }
+
     if (error) {
         return <div className="error-message">{error}</div>;
     }
 
     return (
-        <div className="partthree">      
-            <section>
+        <div className="partthree">
+            <section className="skill-section">
                 {Object.keys(skills).map(category => (
                     <div key={category} className="skills-container">
                         <h2 className="skills-title">{category}</h2>
