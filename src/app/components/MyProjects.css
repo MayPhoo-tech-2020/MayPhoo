@@ -13,7 +13,7 @@
 }
 
 .card {
-    width: 350px;
+    width: 360px;
     background-color: #ffffff;
     border: 2px solid #cccccc;
     border-radius: 16px;
@@ -23,7 +23,7 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    height: 320px; /* Increased height for the cards */
+    height: 345px; /* Increased height for the cards */
 }
 
 .card:hover {
@@ -50,8 +50,11 @@
     font-size: 1.5rem;
     margin-bottom: 15px;
     color: #2F4F4F;
+   
 }
-
+.div-card-title{
+    margin-top: 3px;
+}
 .card-text {
     font-size: 0.9rem;
     margin-bottom: 20px;
@@ -101,10 +104,14 @@
 
 .card-tech {
     margin-bottom: 5px;
+    margin-top: 5px;
     height: 55px;
 }
 .card-description{
-    height: 140px;
+    height: 150px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2px;
 }
 /* Button styling */
 .card-buttons {

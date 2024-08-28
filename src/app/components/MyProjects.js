@@ -59,6 +59,7 @@ const MyProjects = () => {
             <div className="div-card-title">
               <h5 className="card-title">{project.title}</h5>
             </div>
+            <hr></hr>
             <div className="card-description">
               <p className="card-text">{project.description}</p>
             </div>
