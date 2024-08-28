@@ -57,7 +57,7 @@ const MyProjects = () => {
             </div>
             <div className='card-tech'>
                 <p className='card-item'>
-                  <b>Technoloies:</b> {project.technologies}
+                  <b>Technologies:</b> {project.technologies}
                 </p>
                 <p className='card-item'>
                   <b>Languages:</b> {project.languages}

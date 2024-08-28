@@ -50,7 +50,7 @@ const MySkill = () => {
             <section className="skill-section">
                 {Object.keys(skills).map(category => (
                     <div key={category} className="skills-container">
-                        <h2 className="skills-title">{category}</h2>
+                        <h2 className="skills-title"><b>{category}</b></h2>
                         <hr className="skills-line" />
                         <div className="skills-images">
                             {skills[category].map(skill => (
@@ -60,7 +60,7 @@ const MySkill = () => {
                                         alt={skill.title} 
                                         className="skill-img" 
                                     />
-                                    <p className="each-title">{skill.title}</p>
+                                    <p className="each-title"><b>{skill.title}</b></p>
                                 </div>
                             ))}
                         </div>
